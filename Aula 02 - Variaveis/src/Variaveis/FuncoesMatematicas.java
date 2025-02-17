@@ -22,7 +22,7 @@ public class FuncoesMatematicas {
 	
 		//Número aleatório
 		double numeroAleatorio = Math.random();
-		System.out.printf("%.1f",numeroAleatorio); //Limita o número de casas decimais %n quebra linha
+		System.out.printf("%.1f %n",numeroAleatorio); //Limita o número de casas decimais e o %n quebra linha
 		System.out.println("Finalizado");
 		
 	}
