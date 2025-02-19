@@ -10,9 +10,7 @@ public class FuncoesMath {
 		System.out.println(raizQuadrada);
 		
 		double numeroAleatorio = Math.random();
-		System.out.printf("%.1f" , numeroAleatorio);
-		
-		
+		System.out.printf("%.1f" , numeroAleatorio);	
 
 	}
 
