@@ -1,35 +1,23 @@
-package Variaveis;
+package variaveis;
 
 public class TiposDados {
 
 	public static void main(String[] args) {
-		// Tipos Inteiros
-		// byte = - 128 - 127
-		byte numero = 127;
+		int idade = 50;
+		long ano = 2025;
 		
-		// short  = -32.768 - 32.767
-		short n2 = 300;
+		System.out.println(idade);
+		System.out.print(ano);
 		
-		// int = -2.147.483.648 - 2.147.483.647 
-		int idade = 40;
+		float peso = 70.5f;
+		double altura = 78.5;
 		
-		//long 
-		long n3 = 500;
+		System.out.println(peso);
+		System.out.println(altura);
 		
-		// Tipos Decimais
-		//float = -3,4 * 10^38 - 3,4 * 10^38 
-		float peso = 30.60f ;
-		//double -1,8 * 10 ^ 308 - 1,8 * 10 ^ 308
-		double altura = 1.70;
+		String nomeCompleto = "Pedro Miho";
+		System.out.println(nomeCompleto);
 		
-		//Tipos Texto
-		// "" - String
-		// '' - char
-		char genero = 'F';
-		String nome = "Pedro";
-		
-		//Tipo booleano
-		boolean logico = true;
 	}
 
 }

@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Aula02 {
+module variaveis {
 }
