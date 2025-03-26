@@ -18,33 +18,7 @@ public class ContaMesEstruturada {
 		
 		//Total de gastos em ambos os meses
 		double gastoJan = janAgua + janAlim + janEnergia;
-		double gastoFev = fevAgua + fevAlim + fevEnergia;
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		double gastoFev = fevAgua + fevAlim + fevEnergia;	
 		
 		if (gastoJan > gastoFev) {
 			System.out.println("O gasto de janeiro foi maior");
