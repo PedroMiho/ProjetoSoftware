@@ -1,12 +1,11 @@
 package entidades;
 
 public class Veiculos {
-	//Atributos
 	private String marca;
 	private String modelo;
 	private int ano;
 	private double valorDiario;
-		
+	
 	//Construtores
 	public Veiculos(String marca, String modelo, int ano, double valorDiario) {
 		this.marca = marca;
@@ -15,7 +14,7 @@ public class Veiculos {
 		this.valorDiario = valorDiario;
 	}
 
-	//Getters e Setters 
+	//Getters e Setters
 	public String getMarca() {
 		return marca;
 	}
@@ -48,14 +47,14 @@ public class Veiculos {
 		this.valorDiario = valorDiario;
 	}
 
-	//toString
 	@Override
 	public String toString() {
-		return  "Marca: " + marca + 
+		return "Marca: " + marca + 
 				"\nModelo: " + modelo + 
-				"\nAno=" + ano + 
+				"\nano: " + ano + 
 				"\nvalorDiario: " + valorDiario;
 	}
+	
 	
 	
 	
