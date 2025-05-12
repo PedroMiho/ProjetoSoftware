@@ -17,7 +17,7 @@ public class Main extends Application {
 			primaryStage.resizableProperty().setValue(Boolean.FALSE);
 			
 			//Carregar a tela
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/TelaHome.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaHome.fxml"));
 			Parent arquivoFxml = loader.load();
 			
 			//Carregar a cena
