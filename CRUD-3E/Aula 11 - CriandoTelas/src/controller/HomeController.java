@@ -13,8 +13,8 @@ public class HomeController {
 	}
 
 	@FXML
-	void OnClickEntrar(ActionEvent event) {
-
+	void OnClickEntrar(ActionEvent event) throws IOException {
+		AlterarTelaController.mudarTela(event, "/view/TelaLogin.fxml", "Tela Login");
 	}
 
 }
