@@ -20,7 +20,7 @@ public class LoginController {
     private PasswordField txtSenha;
 
     @FXML
-    void onClickEntrar(ActionEvent event) throws SQLException {
+    void onClickEntrar(ActionEvent event) throws SQLException, IOException {
     	String login = this.txtLogin.getText();
     	String senha = this.txtSenha.getText();
     	
@@ -34,7 +34,7 @@ public class LoginController {
 			alerta.setContentText("Verifique as credenciais e tente novamente");
 			alerta.showAndWait();
     	}else {
-    		System.out.println("Acesso liberado");
+    		AlterarTelaController.mudarTelaUsuario(event, "/view/TelaUsuario.fxml", "Tela Usuario", usuario);
     	}
     
     }
