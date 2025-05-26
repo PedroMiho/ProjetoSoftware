@@ -31,7 +31,7 @@ public class LoginUsuario {
 			//Comparar a senha digitada com a senha salva no Banco de dados
 			if (senha.equals(senhaDB)) {
 				//Instancia o objeto da classe usuario, usando as informações retornadas do DB.
-				Usuario usuario = new Usuario(rs.getInt("id"), rs.getString("login"), rs.getString("nome"),
+				Usuario usuario = new Usuario(rs.getInt("id"), rs.getString("nome"), rs.getString("login"), 
 						rs.getString("senha"));
 				return usuario;
 			} else {
