@@ -5,7 +5,6 @@ public class Lanche {
     private String descricao;
     private double valor;
     private int estoque;
-    private boolean disponivel;
 
     //Construtor
     public Lanche(String nome, String descricao, double valor, int estoque) {
@@ -13,12 +12,9 @@ public class Lanche {
         this.descricao = descricao;
         this.valor = valor;
         this.estoque = estoque;
-        this.disponivel = estoque > 0;
     }
 
     //Getters
-
-
     public String getNome() {
         return nome;
     }
@@ -33,10 +29,6 @@ public class Lanche {
 
     public int getEstoque() {
         return estoque;
-    }
-
-    public boolean isDisponivel() {
-        return disponivel;
     }
 
     //Setters
@@ -61,6 +53,7 @@ public class Lanche {
         }
     }
 
+<<<<<<< Updated upstream
     private void verificaDisponivel(){
         this.disponivel = this.estoque > 0;
     }
@@ -90,12 +83,42 @@ public class Lanche {
     }
 
 
+=======
+    public boolean verificaEstoque(){
+        return this.estoque > 0;
+    }
+
+    public boolean pedidoLanche(int quantidade) {
+        if (quantidade <= 0) {
+            return false;
+        } else if (quantidade > this.estoque) {
+            return false;
+        }
+
+        this.estoque -= quantidade;
+        return true;
+    }
+
+    public boolean reposicaoLanche(int quantidade) {
+        if (quantidade <= 0) {
+            return false;
+        }
+
+        this.estoque += quantidade;
+        return true;
+    }
+
+>>>>>>> Stashed changes
     @Override
     public String toString() {
         return "Nome: " + nome +
                 "\nDescricao: " + descricao +
                 "\nValor: R$ " + valor +
                 "\nEstoque: " + estoque +
-                "\nDisponivel: " + disponivel ;
+                "\nDisponivel: " + verificaEstoque() ;
+    }
+
+    public double valorFinal(int quantidade) {
+        return this.valor * quantidade;
     }
 }

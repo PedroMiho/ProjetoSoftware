@@ -10,7 +10,7 @@ public class Main {
         );
 
         Scanner sc = new Scanner(System.in);
-
+        int quantidade;
         while (true) {
             System.out.println("----LISTA DE OPÇÕES----");
             System.out.println("1 - FAZER PEDIDO");
@@ -23,6 +23,7 @@ public class Main {
             String opcao = sc.nextLine();
 
             switch (opcao) {
+<<<<<<< Updated upstream
 
                 case "1":
                     System.out.print("Quantos lanches você deseja: ");
@@ -36,10 +37,22 @@ public class Main {
                         );
                     } else {
                         System.out.println("Pedido não realizado!");
+=======
+                case "1":
+                    System.out.print("Informe a quantidade de lanches: ");
+                    quantidade = sc.nextInt();
+                    sc.nextLine();
+
+                    if (x_burguer.pedidoLanche(quantidade)){
+                        System.out.println("Você pediu o " + quantidade + " " + x_burguer.getNome() +
+                                ", valor total R$" + x_burguer.valorFinal(quantidade));
+                    } else {
+>>>>>>> Stashed changes
                         System.out.println("Quantidade Inválida");
                     }
                     break;
 
+<<<<<<< Updated upstream
                 case "2":
                     System.out.print("Quantos lanches você deseja: ");
                     int quantidadeEstoque = sc.nextInt();
@@ -47,11 +60,29 @@ public class Main {
                     x_burguer.incrementaEstoque(quantidadeEstoque);
                     break;
 
+=======
+
+                case "2":
+                    System.out.print("Informe a quantidade de lanches: ");
+                    quantidade = sc.nextInt();
+                    sc.nextLine();
+
+                    if (x_burguer.reposicaoLanche(quantidade)){
+                        System.out.println("Lanches Acrescentados");
+                    } else {
+                        System.out.println("Quantidade Inválida");
+                    }
+                    break;
+
+
+
+>>>>>>> Stashed changes
                 case "3":
                     System.out.println(x_burguer.toString());
                     break;
 
                 case "4":
+<<<<<<< Updated upstream
                     System.out.println("O lanche " + x_burguer.getNome() +
                             " custa R$ " + x_burguer.getValor()
                     );
@@ -82,6 +113,34 @@ public class Main {
 
 
 
+=======
+                    System.out.print("Informe o valor do lanche: ");
+                    double novoValor = sc.nextDouble();
+
+                    x_burguer.setValor(novoValor);
+                    System.out.println("Valor alterado com sucesso");
+                    break;
+
+
+                case "5" :
+                    System.out.print("Informe o nome do lanche: ");
+                    String novoNome = sc.nextLine();
+
+                    x_burguer.setNome(novoNome);
+                    System.out.println("Nome alterado com sucesso");
+                    break;
+
+                case "6":
+                    return;
+
+                default:
+                    System.out.println("Informe uma opção válida");
+                    break;
+
+            }
+
+
+>>>>>>> Stashed changes
 
         }
 
