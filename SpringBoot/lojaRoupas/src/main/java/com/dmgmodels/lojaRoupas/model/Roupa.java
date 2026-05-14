@@ -3,6 +3,7 @@ package com.dmgmodels.lojaRoupas.model;
 
 import com.dmgmodels.lojaRoupas.dto.DadosAtualizarRoupa;
 import com.dmgmodels.lojaRoupas.dto.DadosCadastroRoupa;
+import com.dmgmodels.lojaRoupas.enums.Tamanho;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

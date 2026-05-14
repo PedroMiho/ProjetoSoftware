@@ -1,6 +1,6 @@
 package com.dmgmodels.lojaRoupas.dto;
 
-import com.dmgmodels.lojaRoupas.model.Tamanho;
+import com.dmgmodels.lojaRoupas.enums.Tamanho;
 
 public record DadosCadastroRoupa(
         String nomeProduto,
