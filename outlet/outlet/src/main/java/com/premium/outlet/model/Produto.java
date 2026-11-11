@@ -1,12 +1,10 @@
 package com.premium.outlet.model;
 
+import com.premium.outlet.dto.AtualizadasDadosRoupa;
 import com.premium.outlet.dto.DadosCadastroRoupa;
 import com.premium.outlet.enums.Tamanho;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity(name = "Produto")
 @Table(name = "produto")
@@ -14,6 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,5 +30,25 @@ public class Produto {
         this.tamanho = roupa.tamanho();
         this.quantidade = roupa.quantidade();
         this.valor = roupa.valor();
+    }
+
+    public void atualizarInformacoes(AtualizadasDadosRoupa dadosRoupa) {
+        if (dadosRoupa.tipo() != null && !dadosRoupa.tipo().isEmpty()) {
+            this.tipo = dadosRoupa.tipo();
+        }
+
+        if (dadosRoupa.marca() != null && !dadosRoupa.marca().isEmpty()) {
+            this.marca = dadosRoupa.marca();
+        }
+
+        this.tamanho = dadosRoupa.tamanho();
+
+        if (dadosRoupa.quantidade() >= 0) {
+            this.quantidade = dadosRoupa.quantidade();
+        }
+
+        if (dadosRoupa.valor() >= 0) {
+            this.valor = dadosRoupa.valor();
+        }
     }
 }

@@ -17,4 +17,5 @@ public record DadosListagemProduto(
                 produto.getTamanho(), produto.getQuantidade(), produto.getValor()
         );
     }
+
 }
